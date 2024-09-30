@@ -23,8 +23,7 @@ public class ReservationServiceTest {
 		ReservationDTO dto = ReservationDTO.builder()
 						.checkInDate(date).guestName("홍길동").roomNo(205).guestPhone("010-3733-4444")
 						.build();
-		int no = service.register(dto);
-		System.out.println("새로운 게시물 번호: " + no);
+		service.register(dto);
 	}
 
 	@Test

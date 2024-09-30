@@ -28,22 +28,22 @@
     <h3>Reservation Register Page</h3>
 </div>
 
-<form action="" method="">
+<form th:action="@{/reservation/register}" th:method="post">
     <div>
         <label for="checkInDate">예약일</label>
-        <input type="text" id="checkInDate" name="" placeholder="2024-09-10"/>
+        <input type="date" id="checkInDate" name="checkInDate"/>
     </div>
     <div>
         <label for="roomNo">객실번호</label>
-        <input type="text" id="roomNo" name="" />
+        <input type="text" id="roomNo" name="roomNo" />
     </div>
     <div>
         <label for="guestName">예약자</label>
-        <input type="text" id="guestName" name="" />
+        <input type="text" id="guestName" name="guestName" />
     </div>
     <div>
         <label for="guestPhone">예약자 연락처</label>
-        <input type="text" id="guestPhone" name="" placeholder="010-1234-5678"/>
+        <input type="text" id="guestPhone" name="guestPhone"/>
     </div>
     <button type="submit">전송</button>
 </form>

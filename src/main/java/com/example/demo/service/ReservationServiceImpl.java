@@ -30,10 +30,9 @@ public class ReservationServiceImpl implements ReservationService {
 	}
 
 	@Override
-	public int register(ReservationDTO dto) {
+	public void register(ReservationDTO dto) {
 		Reservation entity = dtoToEntity(dto);
 		repository.save(entity);
-		return entity.getNo();
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import com.example.demo.entity.Reservation;
 
 public interface ReservationService {
 
-	int register(ReservationDTO dto);
+	void register(ReservationDTO dto);
 
 	List<ReservationDTO> getList();
 
