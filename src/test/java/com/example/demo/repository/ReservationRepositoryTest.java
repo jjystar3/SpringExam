@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,8 +19,12 @@ public class ReservationRepositoryTest {
 	
 	@Test
 	void 예약정보등록() {
+		String string = "2023-09-10";
+		LocalDate date = LocalDate.parse(string, DateTimeFormatter.ISO_DATE);
 		Reservation reservation = Reservation.builder()
-						.guestName("도우너").roomNo(201) //.guestPhone("010-3333-4444")
+//						.checkInDate(date).guestName("둘리").roomNo(201).guestPhone("010-1111-2222")
+//						.checkInDate(date).guestName("또치").roomNo(202).guestPhone("010-3333-4444")
+						.checkInDate(date).guestName("도우너").roomNo(201)
 						.build();
 		repository.save(reservation);
 	}
