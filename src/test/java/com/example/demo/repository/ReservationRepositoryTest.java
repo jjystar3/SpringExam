@@ -45,4 +45,17 @@ public class ReservationRepositoryTest {
 			System.out.println(reservation);
 		}
 	}
+	
+	@Test
+	void 예약정보수정() {
+		Optional<Reservation> result = repository.findById(4);
+		Reservation reservation = result.get();
+		reservation.setGuestPhone("010-9999-1111");
+		repository.save(reservation);
+	}
+	
+	@Test
+	void 예약정보삭제() {
+		repository.deleteById(4);
+	}
 }
