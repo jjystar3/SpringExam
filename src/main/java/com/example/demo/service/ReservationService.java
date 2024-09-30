@@ -7,12 +7,11 @@ import com.example.demo.entity.Reservation;
 
 public interface ReservationService {
 
+	List<ReservationDTO> getList();
+	
 	void register(ReservationDTO dto);
 
-	List<ReservationDTO> getList();
-
 	ReservationDTO read(int no);
-	
 	
 	default Reservation dtoToEntity(ReservationDTO dto) {
 		
