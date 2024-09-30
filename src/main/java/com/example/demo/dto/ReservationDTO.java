@@ -16,11 +16,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @Builder
 public class ReservationDTO {
-
     int no;
     String guestName;
     String guestPhone;
     int roomNo;
-    LocalDate checkInDate;
-    
+    LocalDate checkInDate;    
 }

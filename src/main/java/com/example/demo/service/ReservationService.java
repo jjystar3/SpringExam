@@ -18,6 +18,7 @@ public interface ReservationService {
 		
 		Reservation entity = Reservation.builder()
 				.no(dto.getNo())
+				.checkInDate(dto.getCheckInDate())
 				.guestName(dto.getGuestName())
 				.guestPhone(dto.getGuestPhone())
 				.roomNo(dto.getRoomNo())

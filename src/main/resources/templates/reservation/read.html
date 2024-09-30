@@ -23,23 +23,23 @@
 
 <div>
   <label >예약번호</label>
-  <input type="text" value="1" readonly >
+  <input type="text" th:value="${dto.no}" readonly >
 </div>
 <div>
   <label >예약일</label>
-  <input type="text" value="2024/09/05" readonly >
+  <input type="text" th:value="${dto.checkInDate}" readonly >
 </div>
 <div>
   <label >객실번호</label>
-  <input type="text" value="201" readonly >
+  <input type="text" th:value="${dto.roomNo}" readonly >
 </div>
 <div>
   <label >예약자</label>
-  <input type="text" value="둘리" readonly >
+  <input type="text" th:value="${dto.guestName}" readonly >
 </div>
 <div>
   <label >예약자 연락처</label>
-  <input type="text" value="010-1111-2222" readonly >
+  <input type="text" th:value="${dto.guestPhone}" readonly >
 </div>
 </body>
 
