@@ -1,0 +1,34 @@
+package com.example.demo.service;
+
+import com.example.demo.dto.ReservationDTO;
+import com.example.demo.entity.Reservation;
+
+public interface ReservationService {
+	
+	
+	
+	
+default Reservation dtoToEntity(ReservationDTO dto) {
+		
+		Reservation entity = Reservation.builder()
+				.no(dto.getNo())
+				.guestName(dto.getGuestName())
+				.guestPhone(dto.getGuestPhone())
+				.roomNo(dto.getRoomNo())
+				.build();
+		return entity;
+	}
+	
+	default ReservationDTO entityToDTO(Reservation entity) {
+
+		ReservationDTO dto = ReservationDTO.builder()
+				.no(entity.getNo())
+				.checkInDate(entity.getCheckInDate())
+				.guestName(entity.getGuestName())
+				.guestPhone(entity.getGuestPhone())
+				.roomNo(entity.getRoomNo())
+				.build();
+
+		return dto;
+	}
+}
