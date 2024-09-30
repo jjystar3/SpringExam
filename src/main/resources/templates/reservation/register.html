@@ -31,7 +31,7 @@
 <form th:action="@{/reservation/register}" th:method="post">
     <div>
         <label for="checkInDate">예약일</label>
-        <input type="date" id="checkInDate" name="checkInDate"/>
+        <input type="text" id="checkInDate" name="checkInDate" placeholder="2024-09-10"/>
     </div>
     <div>
         <label for="roomNo">객실번호</label>
@@ -43,7 +43,7 @@
     </div>
     <div>
         <label for="guestPhone">예약자 연락처</label>
-        <input type="text" id="guestPhone" name="guestPhone"/>
+        <input type="text" id="guestPhone" name="guestPhone" placeholder="010-1234-5678"/>
     </div>
     <button type="submit">전송</button>
 </form>
